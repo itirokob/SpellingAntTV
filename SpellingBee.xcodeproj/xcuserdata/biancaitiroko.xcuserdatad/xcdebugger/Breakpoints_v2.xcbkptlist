@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SpellingBee/Controller/ViewController.swift"
+            timestampString = "547733501.144974"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "31"
+            endingLineNumber = "31"
+            landmarkName = "receivedText(text:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SpellingBee.ViewController.receivedText(text: Swift.String) -&gt; ()"
+                  moduleName = "SpellingBee"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/biancaitiroko/Documents/BEPiD-2/SpellingBee/SpellingBee/Controller/ViewController.swift"
+                  timestampString = "547733501.509943"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "31"
+                  endingLineNumber = "31"
+                  offsetFromSymbolStart = "550">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; () in SpellingBee.ViewController.receivedText(text: Swift.String) -&gt; ()"
+                  moduleName = "SpellingBee"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/biancaitiroko/Documents/BEPiD-2/SpellingBee/SpellingBee/Controller/ViewController.swift"
+                  timestampString = "547733501.522579"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "32"
+                  endingLineNumber = "32"
+                  offsetFromSymbolStart = "37">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

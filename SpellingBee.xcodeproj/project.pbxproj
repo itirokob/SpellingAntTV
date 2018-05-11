@@ -11,6 +11,7 @@
 		CB3A158B20A383A0007E47F7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB3A158A20A383A0007E47F7 /* ViewController.swift */; };
 		CB3A158E20A383A0007E47F7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB3A158C20A383A0007E47F7 /* Main.storyboard */; };
 		CB3A159020A383A3007E47F7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CB3A158F20A383A3007E47F7 /* Assets.xcassets */; };
+		CB4ABD1820A4BF3600B07EA3 /* MultipeerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB4ABD1720A4BF3600B07EA3 /* MultipeerService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +21,7 @@
 		CB3A158D20A383A0007E47F7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CB3A158F20A383A3007E47F7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CB3A159120A383A3007E47F7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CB4ABD1720A4BF3600B07EA3 /* MultipeerService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultipeerService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,12 +55,53 @@
 			isa = PBXGroup;
 			children = (
 				CB3A158820A383A0007E47F7 /* AppDelegate.swift */,
-				CB3A158A20A383A0007E47F7 /* ViewController.swift */,
-				CB3A158C20A383A0007E47F7 /* Main.storyboard */,
 				CB3A158F20A383A3007E47F7 /* Assets.xcassets */,
 				CB3A159120A383A3007E47F7 /* Info.plist */,
+				CB4ABD1220A4BE2400B07EA3 /* Model */,
+				CB4ABD1320A4BE2C00B07EA3 /* View */,
+				CB4ABD1420A4BE3800B07EA3 /* Controller */,
 			);
 			path = SpellingBee;
+			sourceTree = "<group>";
+		};
+		CB4ABD1220A4BE2400B07EA3 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CB4ABD1620A4BF1C00B07EA3 /* Persistence */,
+				CB4ABD1520A4BF1500B07EA3 /* Services */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		CB4ABD1320A4BE2C00B07EA3 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CB3A158C20A383A0007E47F7 /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		CB4ABD1420A4BE3800B07EA3 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				CB3A158A20A383A0007E47F7 /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		CB4ABD1520A4BF1500B07EA3 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		CB4ABD1620A4BF1C00B07EA3 /* Persistence */ = {
+			isa = PBXGroup;
+			children = (
+				CB4ABD1720A4BF3600B07EA3 /* MultipeerService.swift */,
+			);
+			path = Persistence;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -132,6 +175,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CB3A158B20A383A0007E47F7 /* ViewController.swift in Sources */,
+				CB4ABD1820A4BF3600B07EA3 /* MultipeerService.swift in Sources */,
 				CB3A158920A383A0007E47F7 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
