@@ -10,8 +10,10 @@ import UIKit
 
 class ViewController: UIViewController {
     let multipeerService = MultipeerService()
+    let checkUserInput = TreatInputService()
     
     @IBOutlet weak var messagePrint: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         multipeerService.delegate = self
@@ -29,8 +31,21 @@ extension ViewController: MultipeerDelegate {
         print("Text sent: \(text)")
         
         DispatchQueue.main.async {
-            self.messagePrint.text = text + String(arc4random())
+            self.messagePrint.text = text
+            
+            let wordList = text.wordList
+            print(self.checkUserInput.treatUserInput(input: wordList))
+            
+//            self.messagePrint.text = self.checkUserInput.treatUserInput(input: wordList)
+
         }
     }
 }
 
+extension String {
+    var wordList: [String] {
+        return components(separatedBy: .punctuationCharacters)
+            .joined()
+            .components(separatedBy: .whitespaces)
+    }
+}

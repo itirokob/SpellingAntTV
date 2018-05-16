@@ -12,6 +12,7 @@
 		CB3A158E20A383A0007E47F7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB3A158C20A383A0007E47F7 /* Main.storyboard */; };
 		CB3A159020A383A3007E47F7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CB3A158F20A383A3007E47F7 /* Assets.xcassets */; };
 		CB4ABD1820A4BF3600B07EA3 /* MultipeerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB4ABD1720A4BF3600B07EA3 /* MultipeerService.swift */; };
+		CB6BEB6420ACA27C00BF40BC /* TreatInputService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB6BEB6320ACA27C00BF40BC /* TreatInputService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		CB3A158F20A383A3007E47F7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CB3A159120A383A3007E47F7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CB4ABD1720A4BF3600B07EA3 /* MultipeerService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultipeerService.swift; sourceTree = "<group>"; };
+		CB6BEB6320ACA27C00BF40BC /* TreatInputService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TreatInputService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +94,8 @@
 		CB4ABD1520A4BF1500B07EA3 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				CB4ABD1720A4BF3600B07EA3 /* MultipeerService.swift */,
+				CB6BEB6320ACA27C00BF40BC /* TreatInputService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -99,7 +103,6 @@
 		CB4ABD1620A4BF1C00B07EA3 /* Persistence */ = {
 			isa = PBXGroup;
 			children = (
-				CB4ABD1720A4BF3600B07EA3 /* MultipeerService.swift */,
 			);
 			path = Persistence;
 			sourceTree = "<group>";
@@ -177,6 +180,7 @@
 				CB3A158B20A383A0007E47F7 /* ViewController.swift in Sources */,
 				CB4ABD1820A4BF3600B07EA3 /* MultipeerService.swift in Sources */,
 				CB3A158920A383A0007E47F7 /* AppDelegate.swift in Sources */,
+				CB6BEB6420ACA27C00BF40BC /* TreatInputService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
