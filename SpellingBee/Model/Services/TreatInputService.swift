@@ -59,8 +59,12 @@ class TreatInputService:NSObject {
         } else if(inputWord == "you"){
             returnArray.append("U")
         } else {
-            for word in Array(inputWord){
-                returnArray.append(String(word))
+            for letter in Array(inputWord){
+                if letter == "0" {
+                    returnArray.append("O")
+                } else {
+                    returnArray.append(String(letter))
+                }
             }
         }
         
