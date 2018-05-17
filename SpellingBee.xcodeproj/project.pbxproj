@@ -10,9 +10,9 @@
 		CB3A158920A383A0007E47F7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB3A158820A383A0007E47F7 /* AppDelegate.swift */; };
 		CB3A158B20A383A0007E47F7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB3A158A20A383A0007E47F7 /* ViewController.swift */; };
 		CB3A158E20A383A0007E47F7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB3A158C20A383A0007E47F7 /* Main.storyboard */; };
-		CB3A159020A383A3007E47F7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CB3A158F20A383A3007E47F7 /* Assets.xcassets */; };
 		CB4ABD1820A4BF3600B07EA3 /* MultipeerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB4ABD1720A4BF3600B07EA3 /* MultipeerService.swift */; };
 		CB6BEB6420ACA27C00BF40BC /* TreatInputService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB6BEB6320ACA27C00BF40BC /* TreatInputService.swift */; };
+		CBB28AF520AE014200E1EA07 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CBB28AF420AE014200E1EA07 /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,10 +20,10 @@
 		CB3A158820A383A0007E47F7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CB3A158A20A383A0007E47F7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		CB3A158D20A383A0007E47F7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		CB3A158F20A383A3007E47F7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CB3A159120A383A3007E47F7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CB4ABD1720A4BF3600B07EA3 /* MultipeerService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultipeerService.swift; sourceTree = "<group>"; };
 		CB6BEB6320ACA27C00BF40BC /* TreatInputService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TreatInputService.swift; sourceTree = "<group>"; };
+		CBB28AF420AE014200E1EA07 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,8 +56,8 @@
 		CB3A158720A383A0007E47F7 /* SpellingBee */ = {
 			isa = PBXGroup;
 			children = (
+				CBB28AF420AE014200E1EA07 /* Assets.xcassets */,
 				CB3A158820A383A0007E47F7 /* AppDelegate.swift */,
-				CB3A158F20A383A3007E47F7 /* Assets.xcassets */,
 				CB3A159120A383A3007E47F7 /* Info.plist */,
 				CB4ABD1220A4BE2400B07EA3 /* Model */,
 				CB4ABD1320A4BE2C00B07EA3 /* View */,
@@ -165,7 +165,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CB3A159020A383A3007E47F7 /* Assets.xcassets in Resources */,
+				CBB28AF520AE014200E1EA07 /* Assets.xcassets in Resources */,
 				CB3A158E20A383A0007E47F7 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -326,6 +326,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 11.0;
 			};
 			name = Debug;
 		};
@@ -345,6 +346,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 11.0;
 			};
 			name = Release;
 		};
