@@ -12,32 +12,37 @@ class ViewController: UIViewController {
     let multipeerService = MultipeerService()
     let checkUserInput = TreatInputService()
     
-    @IBOutlet weak var messagePrint: UILabel!
+    @IBOutlet var letterImages: [UIImageView]!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         multipeerService.delegate = self
-        // Do any additional setup after loading the view, typically from a nib.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
 }
 
 extension ViewController: MultipeerDelegate {
     func receivedText(text:String){
+        
         print("Text sent: \(text)")
         
         DispatchQueue.main.async {
-            self.messagePrint.text = text
+            for imageView in self.letterImages{
+                imageView.image = nil
+            }
             
-            let wordList = text.wordList
-            print(self.checkUserInput.treatUserInput(input: wordList))
+            let lettersArray = self.checkUserInput.treatUserInput(input: text.wordList)
             
-//            self.messagePrint.text = self.checkUserInput.treatUserInput(input: wordList)
-
+            self.updateSpelledLetters(lettersArray: lettersArray)
+        }
+    }
+    
+    func updateSpelledLetters(lettersArray:[String]){
+        for i in 0..<lettersArray.count{
+            for imageView in letterImages{
+                if imageView.tag == i{
+                    imageView.image = UIImage(named: lettersArray[i])
+                }
+            }
         }
     }
 }

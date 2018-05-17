@@ -24,11 +24,11 @@ class TreatInputService:NSObject {
         //Se não, adiciona no array final
         for element in input {
             if element.count == 1 {
-                finalArray.append(element)
+                finalArray.append(element.uppercased())
             } else {
-                let newArray = findLetterMatch(inputWord: element.lowercased())
+                let newArray = findLetterMatch(inputWord: element.uppercased())
                 for i in newArray {
-                    finalArray.append(String(i))
+                    finalArray.append(String(i).uppercased())
                 }
             }
         }
@@ -40,23 +40,25 @@ class TreatInputService:NSObject {
     func findLetterMatch(inputWord:String) -> Array<String> {
         var returnArray:[String] = []
         
-        if (inputWord == "hey") {
+        if (inputWord == "HEY") {
             returnArray.append("A")
-        } else if(inputWord == "bee") {
+        } else if((inputWord == "BEE") || inputWord == "BE") {
             returnArray.append("B")
-        } else if(inputWord == "see") {
+        } else if(inputWord == "SEE") {
             returnArray.append("C")
-        } else if(inputWord == "ass") {
+        } else if(inputWord == "ASS") {
             returnArray.append("S")
-        } else if(inputWord == "are"){
+        } else if((inputWord == "ARE") || (inputWord == "OUR")){
             returnArray.append("R")
-        } else if(inputWord == "kill"){
+        } else if(inputWord == "KILL"){
             returnArray.append("Q")
-        } else if(inputWord == "0"){
+        } else if(inputWord == "0") || (inputWord == "OH"){
             returnArray.append("O")
-        } else if (inputWord == "am") {
+        } else if (inputWord == "AM") {
             returnArray.append("M")
-        } else if(inputWord == "you"){
+        } else if(inputWord == "AND") {
+            returnArray.append("N")
+        }else if(inputWord == "YOU"){
             returnArray.append("U")
         } else {
             for letter in Array(inputWord){
