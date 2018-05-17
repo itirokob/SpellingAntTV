@@ -25,14 +25,22 @@ extension ViewController: MultipeerDelegate {
         
         print("Text sent: \(text)")
         
-        DispatchQueue.main.async {
-            for imageView in self.letterImages{
-                imageView.image = nil
+        if text == "HINT_BUTTON"{
+            print("HINT_BUTTON")
+            //Play hint
+        } else if text == "REPEAT_BUTTON"{
+            print("REPEAT_BUTTON")
+            //Play repeat
+        } else {
+            DispatchQueue.main.async {
+                for imageView in self.letterImages{
+                    imageView.image = nil
+                }
+                
+                let lettersArray = self.checkUserInput.treatUserInput(input: text.wordList)
+                
+                self.updateSpelledLetters(lettersArray: lettersArray)
             }
-            
-            let lettersArray = self.checkUserInput.treatUserInput(input: text.wordList)
-            
-            self.updateSpelledLetters(lettersArray: lettersArray)
         }
     }
     
