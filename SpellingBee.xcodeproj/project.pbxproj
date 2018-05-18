@@ -13,6 +13,7 @@
 		CB4ABD1820A4BF3600B07EA3 /* MultipeerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB4ABD1720A4BF3600B07EA3 /* MultipeerService.swift */; };
 		CB6BEB6420ACA27C00BF40BC /* TreatInputService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB6BEB6320ACA27C00BF40BC /* TreatInputService.swift */; };
 		CBB28AF520AE014200E1EA07 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CBB28AF420AE014200E1EA07 /* Assets.xcassets */; };
+		CBC54D9920AEF79A00A479FC /* SpeakService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC54D9820AEF79A00A479FC /* SpeakService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		CB4ABD1720A4BF3600B07EA3 /* MultipeerService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultipeerService.swift; sourceTree = "<group>"; };
 		CB6BEB6320ACA27C00BF40BC /* TreatInputService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TreatInputService.swift; sourceTree = "<group>"; };
 		CBB28AF420AE014200E1EA07 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CBC54D9820AEF79A00A479FC /* SpeakService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeakService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +98,7 @@
 			children = (
 				CB4ABD1720A4BF3600B07EA3 /* MultipeerService.swift */,
 				CB6BEB6320ACA27C00BF40BC /* TreatInputService.swift */,
+				CBC54D9820AEF79A00A479FC /* SpeakService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -180,6 +183,7 @@
 				CB3A158B20A383A0007E47F7 /* ViewController.swift in Sources */,
 				CB4ABD1820A4BF3600B07EA3 /* MultipeerService.swift in Sources */,
 				CB3A158920A383A0007E47F7 /* AppDelegate.swift in Sources */,
+				CBC54D9920AEF79A00A479FC /* SpeakService.swift in Sources */,
 				CB6BEB6420ACA27C00BF40BC /* TreatInputService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

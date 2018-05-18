@@ -9,13 +9,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "SpellingBee/Model/Services/TreatInputService.swift"
-            timestampString = "548281623.905535"
+            filePath = "SpellingBee/Controller/ViewController.swift"
+            timestampString = "548339703.923805"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "36"
-            endingLineNumber = "36"
-            landmarkName = "treatUserInput(input:rightWord:)"
+            startingLineNumber = "61"
+            endingLineNumber = "61"
+            landmarkName = "receivedText(text:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

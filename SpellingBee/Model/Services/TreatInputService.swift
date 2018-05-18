@@ -83,7 +83,7 @@ class TreatInputService:NSObject {
         
         if (inputWord == "HEY") {
             returnArray.append("A")
-        } else if((inputWord == "BEE") || inputWord == "BE") {
+        } else if((inputWord == "BEE") || inputWord == "BE" || inputWord == "ME") {
             returnArray.append("B")
         } else if(inputWord == "SEE") {
             returnArray.append("C")

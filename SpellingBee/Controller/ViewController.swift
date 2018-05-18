@@ -11,6 +11,7 @@ import UIKit
 class ViewController: UIViewController {
     let multipeerService = MultipeerService()
     let checkUserInput = TreatInputService()
+    let speakService = SpeakService()
     
     @IBOutlet var letterImages: [UIImageView]!
     
@@ -22,11 +23,11 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         multipeerService.delegate = self
         
-        currentWord = "ENCODED"//Rand
+        currentWord = "BOARD"//Rand
     }
     
     @IBAction func dictateWordButton(_ sender: Any) {
-        
+        speakService.text2Speech(textToBeRead: currentWord)
     }
     
     override func viewWillAppear(_ animated: Bool) {
