@@ -56,6 +56,10 @@ class TreatInputService:NSObject {
                         fixedArray[i] = "E"
                     } else if ((finalArray[i] == "E") && (rightWord[i] == "A")){
                         fixedArray[i] = "A"
+                    } else if ((finalArray[i] == "V") && (rightWord[i] == "B")){
+                        fixedArray[i] = "B"
+                    } else if ((finalArray[i] == "B") && (rightWord[i] == "V")){
+                        fixedArray[i] = "V"
                     }
                 }
             }

@@ -18,16 +18,26 @@ class SpeakService:NSObject, AVSpeechSynthesizerDelegate {
             synthesizer = AVSpeechSynthesizer()
             synthesizer?.delegate = self
             
-            let utterance = AVSpeechUtterance(string: textToBeRead)
-            utterance.rate = 0.3
-            utterance.voice = AVSpeechSynthesisVoice(language: "en-US")
-            
-            utterance.pitchMultiplier = 1.3
+            var utterance = setUtterance(language: "en-GB", textToBeRead: textToBeRead)
             print("\(utterance.voice!)")
             
             synthesizer!.speak(utterance)
+            
+            utterance = setUtterance(language: "en-US", textToBeRead: textToBeRead)
+            synthesizer!.speak(utterance)
+            
         }
     }
+    
+    func setUtterance(language: String, textToBeRead: String) -> AVSpeechUtterance {
+        let utterance = AVSpeechUtterance(string: textToBeRead)
+        utterance.rate = 0.3
+        utterance.voice = AVSpeechSynthesisVoice(language: language)
+        
+        utterance.pitchMultiplier = 1.3
+        return utterance
+    }
+    
     
     func speechSynthesizer(_ synthesizer: AVSpeechSynthesizer, didFinish utterance: AVSpeechUtterance) {
         self.synthesizer = nil

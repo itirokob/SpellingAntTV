@@ -15,20 +15,27 @@ class ViewController: UIViewController {
     
     var wordsAndHints: [WordAndHintDict] = []
     
+    var wordsToBeChosen: [WordAndHintDict] = []
+    
     @IBOutlet var letterImages: [UIImageView]!
     
     var lettersArray:[Character] = []
     
     var currentWord: WordAndHintDict = WordAndHintDict(word: "", hint: "")
     
+    var randomIndex: Int = 0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.initializeDict()
         
+        wordsToBeChosen = wordsAndHints
+        
         multipeerService.delegate = self
         
-        currentWord = wordsAndHints[Int(arc4random_uniform(UInt32(wordsAndHints.count-1)))]
+        randomIndex = randomNumber(max: wordsToBeChosen.count-1)
+        currentWord = wordsToBeChosen[randomIndex]
     }
     
     @IBAction func dictateWordButton(_ sender: Any) {
@@ -41,6 +48,10 @@ class ViewController: UIViewController {
                 imageView.image = nil
             }
         }
+    }
+    
+    func randomNumber(max: Int) -> Int {
+        return Int(arc4random_uniform(UInt32(max)))
     }
     
     func initializeDict() {
@@ -81,8 +92,8 @@ extension ViewController: MultipeerDelegate {
             print("REPEAT_BUTTON")
             //Play repeat
         } else if text == "END_OF_SPEECH" {
-            //Trata a palavra pra ver se está certo
             
+            //Trata a palavra pra ver se está certo
             let inputWord = self.lettersArrayToString(lettersArray: self.lettersArray)
             
             if inputWord == currentWord.word {
@@ -92,6 +103,12 @@ extension ViewController: MultipeerDelegate {
                 popAlert(title: "Oh no!", message: "Wrong answer!")
                 print("Wrong answer")
             }
+            
+            //Limpa o array
+            self.lettersArray = []
+            
+            self.updateSpelledLetters(lettersArray: self.lettersArray)
+            
         } else {
             DispatchQueue.main.async {
                 for imageView in self.letterImages{
@@ -119,7 +136,13 @@ extension ViewController: MultipeerDelegate {
         
         alert.addAction(UIAlertAction(title: NSLocalizedString("Next", comment: "Next"), style: .default, handler: { _ in
             NSLog("The \"next\" alert occured.")
-            self.currentWord = self.wordsAndHints[Int(arc4random_uniform(UInt32(self.wordsAndHints.count-1)))]
+            if self.wordsToBeChosen.count > 1 {
+                self.wordsToBeChosen.remove(at: self.randomIndex)
+            } else {
+                self.wordsToBeChosen = self.wordsAndHints
+            }
+            self.randomIndex = self.randomNumber(max: self.wordsToBeChosen.count-1)
+            self.currentWord = self.wordsToBeChosen[self.randomIndex]
         }))
         
         self.present(alert, animated: true, completion: nil)
