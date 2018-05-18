@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1284D44620AF02BC00EC09B5 /* WordAndHintDict.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1284D44520AF02BC00EC09B5 /* WordAndHintDict.swift */; };
 		CB3A158920A383A0007E47F7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB3A158820A383A0007E47F7 /* AppDelegate.swift */; };
 		CB3A158B20A383A0007E47F7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB3A158A20A383A0007E47F7 /* ViewController.swift */; };
 		CB3A158E20A383A0007E47F7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB3A158C20A383A0007E47F7 /* Main.storyboard */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1284D44520AF02BC00EC09B5 /* WordAndHintDict.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordAndHintDict.swift; sourceTree = "<group>"; };
 		CB3A158520A383A0007E47F7 /* SpellingBee.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpellingBee.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB3A158820A383A0007E47F7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CB3A158A20A383A0007E47F7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -73,6 +75,7 @@
 			children = (
 				CB4ABD1620A4BF1C00B07EA3 /* Persistence */,
 				CB4ABD1520A4BF1500B07EA3 /* Services */,
+				1284D44520AF02BC00EC09B5 /* WordAndHintDict.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -184,6 +187,7 @@
 				CB4ABD1820A4BF3600B07EA3 /* MultipeerService.swift in Sources */,
 				CB3A158920A383A0007E47F7 /* AppDelegate.swift in Sources */,
 				CBC54D9920AEF79A00A479FC /* SpeakService.swift in Sources */,
+				1284D44620AF02BC00EC09B5 /* WordAndHintDict.swift in Sources */,
 				CB6BEB6420ACA27C00BF40BC /* TreatInputService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
