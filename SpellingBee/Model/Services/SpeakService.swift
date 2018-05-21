@@ -12,7 +12,7 @@ import AVFoundation
 class SpeakService:NSObject, AVSpeechSynthesizerDelegate {
     var synthesizer:AVSpeechSynthesizer?
 
-    func text2Speech(textToBeRead: String) {
+    func text2SpeechInENandGB(textToBeRead: String) {
         if (synthesizer == nil)
         {
             synthesizer = AVSpeechSynthesizer()
@@ -25,7 +25,6 @@ class SpeakService:NSObject, AVSpeechSynthesizerDelegate {
             
             utterance = setUtterance(language: "en-US", textToBeRead: textToBeRead)
             synthesizer!.speak(utterance)
-            
         }
     }
     
@@ -36,6 +35,23 @@ class SpeakService:NSObject, AVSpeechSynthesizerDelegate {
         
         utterance.pitchMultiplier = 1.3
         return utterance
+    }
+    
+    func textToSpeechLongSentence(textToBeRead: String){
+        if (synthesizer == nil)
+        {
+            synthesizer = AVSpeechSynthesizer()
+            synthesizer?.delegate = self
+            
+            let utterance = AVSpeechUtterance(string: textToBeRead)
+            utterance.rate = 0.4
+            utterance.voice = AVSpeechSynthesisVoice(language: "en-US")
+            
+            utterance.pitchMultiplier = 1.3
+            print("\(utterance.voice!)")
+            
+            synthesizer!.speak(utterance)
+        }
     }
     
     

@@ -12,6 +12,7 @@ class ViewController: UIViewController {
     let multipeerService = MultipeerService()
     let checkUserInput = TreatInputService()
     let speakService = SpeakService()
+    let wordService = WordsAndHintsService()
     
     @IBOutlet weak var speakButton: UIButton!
     
@@ -38,8 +39,16 @@ class ViewController: UIViewController {
         
         multipeerService.delegate = self
         
-        randomIndex = randomNumber(max: wordsToBeChosen.count-1)
-        currentWord = wordsToBeChosen[randomIndex]
+//        randomIndex = randomNumber(max: wordsToBeChosen.count-1)
+//        currentWord = wordsToBeChosen[randomIndex]
+        self.wordService.requestWordAndExample(completionHandler: { (result) in
+            if let currentWord = result {
+                self.currentWord = currentWord
+            } else {
+                print("Erro na escolha da nova palavra. requestWordAndExample retornou nil")
+            }
+        })
+
     }
     
     @IBAction func dictateWordButton(_ sender: Any) {
@@ -116,6 +125,8 @@ extension ViewController: MultipeerDelegate {
         if text == "HINT_BUTTON"{
             print("HINT_BUTTON")
             //Play hint
+            speakService.textToSpeechLongSentence(textToBeRead: currentWord.hint)
+
         } else if text == "REPEAT_BUTTON"{
             self.firstSpeech()
             print("REPEAT_BUTTON")
@@ -182,13 +193,22 @@ extension ViewController: MultipeerDelegate {
         
         alert.addAction(UIAlertAction(title: NSLocalizedString("Next", comment: "Next"), style: .default, handler: { _ in
             NSLog("The \"next\" alert occured.")
-            if self.wordsToBeChosen.count > 1 {
-                self.wordsToBeChosen.remove(at: self.randomIndex)
-            } else {
-                self.wordsToBeChosen = self.wordsAndHints
-            }
-            self.randomIndex = self.randomNumber(max: self.wordsToBeChosen.count-1)
-            self.currentWord = self.wordsToBeChosen[self.randomIndex]
+//            if self.wordsToBeChosen.count > 1 {
+//                self.wordsToBeChosen.remove(at: self.randomIndex)
+//            } else {
+//                self.wordsToBeChosen = self.wordsAndHints
+//            }
+//            self.randomIndex = self.randomNumber(max: self.wordsToBeChosen.count-1)
+//            self.currentWord = self.wordsToBeChosen[self.randomIndex]
+            
+            self.wordService.requestWordAndExample(completionHandler: { (result) in
+                if let currentWord = result {
+                    self.currentWord = currentWord
+                    print(currentWord.word)
+                } else {
+                    print("Erro na escolha da nova palavra. requestWordAndExample retornou nil")
+                }
+            })
         }))
         
         self.present(alert, animated: true, completion: nil)
