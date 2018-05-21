@@ -118,23 +118,23 @@
                                 <rect key="frame" x="728" y="197" width="464" height="509"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
-                                <state key="normal" title="Button" image="repeat"/>
+                                <state key="normal" title="Button" image="play"/>
                                 <connections>
                                     <action selector="dictateWordButton:" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="TdA-VK-dOI"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Press me to play the word!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VIg-O7-Bsn">
-                                <rect key="frame" x="1217" y="394" width="453" height="46"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9mM-3F-rX0">
+                                <rect key="frame" x="1708" y="38" width="190" height="164"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                                <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
+                                <state key="normal" title="Button" image="hint"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="wu6-TO-1qx"/>
                     </view>
                     <connections>
+                        <outlet property="speakButton" destination="gD2-YV-A3J" id="EJy-WZ-IwV"/>
                         <outletCollection property="letterImages" destination="5Oq-Wh-85i" collectionClass="NSMutableArray" id="hxt-Ap-i7J"/>
                         <outletCollection property="letterImages" destination="yOZ-3m-xFX" collectionClass="NSMutableArray" id="je5-gK-GyI"/>
                         <outletCollection property="letterImages" destination="EGM-i1-xgc" collectionClass="NSMutableArray" id="yKg-Ke-UH7"/>
@@ -154,11 +154,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1890" y="-1077"/>
+            <point key="canvasLocation" x="1998" y="-1077"/>
         </scene>
     </scenes>
     <resources>
         <image name="Background-orange" width="1920" height="1080"/>
-        <image name="repeat" width="377" height="476"/>
+        <image name="hint" width="110" height="124"/>
+        <image name="play" width="398" height="504"/>
     </resources>
 </document>
