@@ -30,6 +30,10 @@ class ViewController: UIViewController {
     
     var timer = Timer()
     
+    var isCorrect = false
+    
+    var isTryAgain = true
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -60,6 +64,19 @@ class ViewController: UIViewController {
             for imageView in self.letterImages{
                 imageView.image = nil
             }
+            
+            self.setButtonImage(button: self.speakButton, imageName: "play")
+        }
+        
+        print(isTryAgain)
+        if !isTryAgain {
+            self.wordService.requestWordAndExample(completionHandler: { (result) in
+                if let currentWord = result {
+                    self.currentWord = currentWord
+                } else {
+                    print("Erro na escolha da nova palavra. requestWordAndExample retornou nil")
+                }
+            })
         }
     }
     
@@ -106,6 +123,9 @@ class ViewController: UIViewController {
             }
         }
     }
+    
+    @IBAction func unwindToGameVC(segue:UIStoryboardSegue) { }
+
 }
 
 extension ViewController: MultipeerDelegate {
@@ -133,12 +153,19 @@ extension ViewController: MultipeerDelegate {
             let inputWord = self.lettersArrayToString(lettersArray: self.lettersArray)
             
             if inputWord == currentWord.word {
-                popAlert(title: "YAY", message: "Right answer!")
+//                popAlert(title: "YAY", message: "Right answer!")
+                
+                self.isCorrect = true
+                
                 print("Right answer")
             } else {
-                popAlert(title: "Oh no!", message: "Wrong answer!")
+//                popAlert(title: "Oh no!", message: "Wrong answer!")
+                self.isCorrect = false
                 print("Wrong answer")
             }
+            
+            performSegue(withIdentifier: "rightOrWrongSegue", sender: self)
+
             
             //Limpa o array
             self.lettersArray = []
@@ -167,10 +194,18 @@ extension ViewController: MultipeerDelegate {
         }
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "rightOrWrongSegue" {
+            if let destination = segue.destination as? RightOrWrongViewController {
+                destination.isCorrect = self.isCorrect
+            }
+        }
+    }
+    
     @objc func addPulse(){
         DispatchQueue.main.async {
-            let pulse = Pulsing(numberOfPulses: 1, radius: 1000, position: self.speakButton.center)
-            pulse.animationDuration = 2.0
+            let pulse = Pulsing(numberOfPulses: 1, radius: 300, position: self.speakButton.center)
+            pulse.animationDuration = 1.4
             pulse.backgroundColor = UIColor.orange.cgColor
             
             self.view.layer.insertSublayer(pulse, below: self.speakButton.layer)

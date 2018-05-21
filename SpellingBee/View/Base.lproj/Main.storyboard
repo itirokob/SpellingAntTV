@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder.AppleTV.Storyboard" version="3.0" toolsVersion="14109" targetRuntime="AppleTV" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder.AppleTV.Storyboard" version="3.0" toolsVersion="14109" targetRuntime="AppleTV" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ffc-Gk-lV4">
     <device id="appleTV" orientation="landscape">
         <adaptation id="light"/>
     </device>
@@ -21,11 +21,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9FX-pM-ydG">
-                                <rect key="frame" x="823" y="497" width="275" height="86"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Main Menu - BG" translatesAutoresizingMaskIntoConstraints="NO" id="FDK-Sk-5ym">
+                                <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9FX-pM-ydG">
+                                <rect key="frame" x="745" y="370" width="430" height="341"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
-                                <state key="normal" title="Start Game"/>
+                                <state key="normal" image="StartBtn">
+                                    <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
                                 <connections>
                                     <segue destination="BYZ-38-t0r" kind="show" id="YRk-Uw-ZMb"/>
                                 </connections>
@@ -129,6 +135,13 @@
                                 <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
                                 <state key="normal" title="Button" image="hint"/>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Press the mic button on your iOS device and spell the word!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5D6-18-R1M">
+                                <rect key="frame" x="453" y="115" width="1015" height="46"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="wu6-TO-1qx"/>
@@ -150,15 +163,84 @@
                         <outletCollection property="letterImages" destination="Wcw-iP-eoz" collectionClass="NSMutableArray" id="Pmh-IT-yJP"/>
                         <outletCollection property="letterImages" destination="S5P-JW-fR8" collectionClass="NSMutableArray" id="T3u-MM-VKO"/>
                         <outletCollection property="letterImages" destination="HRh-5J-H2z" collectionClass="NSMutableArray" id="gou-Lk-qRU"/>
+                        <segue destination="l8X-7R-f6I" kind="show" identifier="rightOrWrongSegue" id="MWq-Cu-fvG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1998" y="-1077"/>
         </scene>
+        <!--Right Or Wrong View Controller-->
+        <scene sceneID="zVE-uI-a42">
+            <objects>
+                <viewController id="l8X-7R-f6I" customClass="RightOrWrongViewController" customModule="SpellingBee" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Kc0-jE-Ijf"/>
+                        <viewControllerLayoutGuide type="bottom" id="ash-c4-sOE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="bqK-ql-sYM">
+                        <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Main Menu - BG" translatesAutoresizingMaskIntoConstraints="NO" id="ZQj-sZ-54o">
+                                <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yZv-30-iyu">
+                                <rect key="frame" x="670" y="517" width="580" height="86"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.97647058823529409" green="0.83529411764705885" blue="0.60784313725490191" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
+                                <state key="normal" title="TRY AGAIN"/>
+                                <state key="focused">
+                                    <color key="titleColor" red="0.97254901960784312" green="0.69019607843137254" blue="0.21568627450980393" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="button1Action:" destination="l8X-7R-f6I" eventType="primaryActionTriggered" id="Lrh-gf-Diz"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rs8-AO-7bd">
+                                <rect key="frame" x="670" y="627" width="580" height="86"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.97647058823529409" green="0.83529411764705885" blue="0.60784313725490191" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
+                                <state key="normal" title="NEXT WORD"/>
+                                <state key="focused">
+                                    <color key="titleColor" red="0.97254901959999995" green="0.69019607839999997" blue="0.2156862745" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="button2Action:" destination="l8X-7R-f6I" eventType="primaryActionTriggered" id="gTC-EL-xuK"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="YOU GOT IT WRONG" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iBJ-Ud-h78">
+                                <rect key="frame" x="723" y="368" width="474" height="90"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="38"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="bX2-7l-jBA"/>
+                    </view>
+                    <connections>
+                        <outlet property="button1" destination="yZv-30-iyu" id="9LU-ZQ-Ceu"/>
+                        <outlet property="button2" destination="rs8-AO-7bd" id="T4T-DQ-xo7"/>
+                        <outlet property="feedbackLabel" destination="iBJ-Ud-h78" id="BDT-9r-doN"/>
+                        <segue destination="0D3-cC-0n8" kind="unwind" identifier="unwindSegueToGameVC" unwindAction="unwindToGameVCWithSegue:" id="yW2-B7-vXY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LlI-Gv-DKy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="0D3-cC-0n8" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="4270" y="-1102"/>
+        </scene>
     </scenes>
     <resources>
         <image name="Background-orange" width="1920" height="1080"/>
+        <image name="Main Menu - BG" width="1920" height="1080"/>
+        <image name="StartBtn" width="350" height="301"/>
         <image name="hint" width="110" height="124"/>
         <image name="play" width="398" height="504"/>
     </resources>

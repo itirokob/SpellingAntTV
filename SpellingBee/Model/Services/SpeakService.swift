@@ -13,18 +13,20 @@ class SpeakService:NSObject, AVSpeechSynthesizerDelegate {
     var synthesizer:AVSpeechSynthesizer?
 
     func text2SpeechInENandGB(textToBeRead: String) {
-        if (synthesizer == nil)
-        {
-            synthesizer = AVSpeechSynthesizer()
-            synthesizer?.delegate = self
-            
-            var utterance = setUtterance(language: "en-GB", textToBeRead: textToBeRead)
-            print("\(utterance.voice!)")
-            
-            synthesizer!.speak(utterance)
-            
-            utterance = setUtterance(language: "en-US", textToBeRead: textToBeRead)
-            synthesizer!.speak(utterance)
+        if textToBeRead != ""{
+            if (synthesizer == nil)
+                {
+                    synthesizer = AVSpeechSynthesizer()
+                    synthesizer?.delegate = self
+                    
+                    var utterance = setUtterance(language: "en-GB", textToBeRead: textToBeRead)
+                    print("\(utterance.voice!)")
+                    
+                    synthesizer!.speak(utterance)
+                    
+                    utterance = setUtterance(language: "en-US", textToBeRead: textToBeRead)
+                    synthesizer!.speak(utterance)
+                }
         }
     }
     

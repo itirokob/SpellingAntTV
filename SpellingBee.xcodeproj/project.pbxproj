@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		1284D44620AF02BC00EC09B5 /* WordAndHintDict.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1284D44520AF02BC00EC09B5 /* WordAndHintDict.swift */; };
 		1284D44820B341C900EC09B5 /* Pulsing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1284D44720B341C900EC09B5 /* Pulsing.swift */; };
+		1284D44C20B35BAC00EC09B5 /* RightOrWrongViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1284D44B20B35BAC00EC09B5 /* RightOrWrongViewController.swift */; };
 		63E398EFC1D8E83CD590A547 /* Pods_SpellingBee.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2EEF063189433F9E22E8ED13 /* Pods_SpellingBee.framework */; };
 		CB3A158920A383A0007E47F7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB3A158820A383A0007E47F7 /* AppDelegate.swift */; };
 		CB3A158B20A383A0007E47F7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB3A158A20A383A0007E47F7 /* ViewController.swift */; };
@@ -23,6 +24,7 @@
 /* Begin PBXFileReference section */
 		1284D44520AF02BC00EC09B5 /* WordAndHintDict.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordAndHintDict.swift; sourceTree = "<group>"; };
 		1284D44720B341C900EC09B5 /* Pulsing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pulsing.swift; sourceTree = "<group>"; };
+		1284D44B20B35BAC00EC09B5 /* RightOrWrongViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RightOrWrongViewController.swift; sourceTree = "<group>"; };
 		12FECABCD02BCBA816E46DC0 /* Pods-SpellingBee.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpellingBee.release.xcconfig"; path = "Pods/Target Support Files/Pods-SpellingBee/Pods-SpellingBee.release.xcconfig"; sourceTree = "<group>"; };
 		2EEF063189433F9E22E8ED13 /* Pods_SpellingBee.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SpellingBee.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3CBACE5263C5C15D3A082741 /* Pods-SpellingBee.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpellingBee.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SpellingBee/Pods-SpellingBee.debug.xcconfig"; sourceTree = "<group>"; };
@@ -104,6 +106,7 @@
 			isa = PBXGroup;
 			children = (
 				CB3A158A20A383A0007E47F7 /* ViewController.swift */,
+				1284D44B20B35BAC00EC09B5 /* RightOrWrongViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -260,6 +263,7 @@
 				CB3A158B20A383A0007E47F7 /* ViewController.swift in Sources */,
 				CB4ABD1820A4BF3600B07EA3 /* MultipeerService.swift in Sources */,
 				CB9CDCEA20B3352A003DE3C0 /* WordsAndHintsService.swift in Sources */,
+				1284D44C20B35BAC00EC09B5 /* RightOrWrongViewController.swift in Sources */,
 				CB3A158920A383A0007E47F7 /* AppDelegate.swift in Sources */,
 				CBC54D9920AEF79A00A479FC /* SpeakService.swift in Sources */,
 				1284D44620AF02BC00EC09B5 /* WordAndHintDict.swift in Sources */,

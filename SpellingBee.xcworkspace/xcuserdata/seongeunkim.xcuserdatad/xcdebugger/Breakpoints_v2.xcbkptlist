@@ -10,76 +10,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SpellingBee/Controller/ViewController.swift"
-            timestampString = "548623645.015554"
+            timestampString = "548628854.847044"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "172"
-            endingLineNumber = "172"
-            landmarkName = "addPulse()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "SpellingBee/Controller/ViewController.swift"
-            timestampString = "548623645.016343"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "153"
-            endingLineNumber = "153"
-            landmarkName = "receivedText(text:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "SpellingBee.ViewController.receivedText(text: Swift.String) -&gt; ()"
-                  moduleName = "SpellingBee"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/seongeunkim/Dropbox%20(DeveloperAcademy-BR)/SpellingAntTV/SpellingBee/Controller/ViewController.swift"
-                  timestampString = "548623275.074419"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "152"
-                  endingLineNumber = "152"
-                  offsetFromSymbolStart = "2956">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 () -&gt; () in SpellingBee.ViewController.receivedText(text: Swift.String) -&gt; ()"
-                  moduleName = "SpellingBee"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/seongeunkim/Dropbox%20(DeveloperAcademy-BR)/SpellingAntTV/SpellingBee/Controller/ViewController.swift"
-                  timestampString = "548623275.079124"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "153"
-                  endingLineNumber = "153"
-                  offsetFromSymbolStart = "17">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "SpellingBee/Controller/ViewController.swift"
-            timestampString = "548623645.016899"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "119"
-            endingLineNumber = "119"
-            landmarkName = "receivedText(text:)"
+            startingLineNumber = "118"
+            endingLineNumber = "118"
+            landmarkName = "firstSpeech()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
