@@ -14,7 +14,7 @@ class WordAndHintDict: NSObject {
     
     init(word: String, hint: String) {
         super.init()
-        self.word = word
+        self.word = word.uppercased()
         self.hint = hint
     }
 }
