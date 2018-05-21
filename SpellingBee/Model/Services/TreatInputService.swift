@@ -105,6 +105,8 @@ class TreatInputService:NSObject {
             returnArray.append("N")
         }else if(inputWord == "YOU"){
             returnArray.append("U")
+        } else if(inputWord == "CHI"){
+            returnArray.append("T")
         } else {
             for letter in Array(inputWord){
                 if letter == "0" {
