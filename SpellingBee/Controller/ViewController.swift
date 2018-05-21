@@ -13,6 +13,8 @@ class ViewController: UIViewController {
     let checkUserInput = TreatInputService()
     let speakService = SpeakService()
     
+    @IBOutlet weak var speakButton: UIButton!
+    
     var wordsAndHints: [WordAndHintDict] = []
     
     var wordsToBeChosen: [WordAndHintDict] = []
@@ -24,6 +26,8 @@ class ViewController: UIViewController {
     var currentWord: WordAndHintDict = WordAndHintDict(word: "", hint: "")
     
     var randomIndex: Int = 0
+    
+    var timer = Timer()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,7 +43,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func dictateWordButton(_ sender: Any) {
-        speakService.text2Speech(textToBeRead: currentWord.word)
+        self.firstSpeech()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -53,6 +57,15 @@ class ViewController: UIViewController {
     func randomNumber(max: Int) -> Int {
         return Int(arc4random_uniform(UInt32(max)))
     }
+    
+    @objc func addPulse(){
+        let pulse = Pulsing(numberOfPulses: 1, radius: 150, position: speakButton.center)
+        pulse.animationDuration = 0.8
+        pulse.backgroundColor = UIColor.orange.cgColor
+        
+        self.view.layer.insertSublayer(pulse, below: speakButton.layer)
+    }
+    
     
     func initializeDict() {
         wordsAndHints.append(WordAndHintDict(word: "BANANA", hint: "I like to eat banana in the morning."))
@@ -74,6 +87,22 @@ class ViewController: UIViewController {
         wordsAndHints.append(WordAndHintDict(word: "THERIATRICS", hint: "Joanna bewildered all her friends when she said that her father is a specialist in theriatrics."))
         
     }
+    
+    func setButtonImage(button: UIButton, imageName: String) {
+        if let image = UIImage(named: imageName) {
+            DispatchQueue.main.async {
+                button.setImage(image, for: .normal)
+            }
+        }
+    }
+    
+    func firstSpeech() {
+        speakService.text2Speech(textToBeRead: currentWord.word)
+        
+        if(speakButton.currentImage == #imageLiteral(resourceName: "repeat")) {
+            setButtonImage(button: speakButton, imageName: "repeat")
+        }
+    }
 }
 
 extension ViewController: MultipeerDelegate {
@@ -88,11 +117,12 @@ extension ViewController: MultipeerDelegate {
             print("HINT_BUTTON")
             //Play hint
         } else if text == "REPEAT_BUTTON"{
-            speakService.text2Speech(textToBeRead: currentWord.word)
+            self.firstSpeech()
             print("REPEAT_BUTTON")
             //Play repeat
         } else if text == "END_OF_SPEECH" {
-            
+            //Para o pulse
+            timer.invalidate()
             //Trata a palavra pra ver se está certo
             let inputWord = self.lettersArrayToString(lettersArray: self.lettersArray)
             
@@ -109,7 +139,15 @@ extension ViewController: MultipeerDelegate {
             
             self.updateSpelledLetters(lettersArray: self.lettersArray)
             
+        } else if text == "START_OF_SPEECH" {
+            
+            
+            //desabilita os botões
+            self.disableButtons()
+            //Comeca o pulse
+            timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(ViewController.addPulse), userInfo: nil, repeats: true)
         } else {
+            
             DispatchQueue.main.async {
                 for imageView in self.letterImages{
                     imageView.image = nil
@@ -118,6 +156,14 @@ extension ViewController: MultipeerDelegate {
                 
                 self.updateSpelledLetters(lettersArray: self.lettersArray)
             }
+        }
+    }
+    
+    func disableButtons() {
+        DispatchQueue.main.async {
+
+            self.speakButton.isEnabled = false
+            self.setButtonImage(button: self.speakButton, imageName: "repeat-disabled")
         }
     }
     

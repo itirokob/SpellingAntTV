@@ -2,17 +2,17 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "repeat-again-tvOS.png",
+      "filename" : "repeat-again-disabled-tvOS.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "filename" : "repeat-again-tvOS@2x.png",
+      "filename" : "repeat-again-disabled-tvOS@2x.png",
       "scale" : "2x"
     },
     {
       "idiom" : "universal",
-      "filename" : "repeat-again-tvOS@3x.png",
+      "filename" : "repeat-again-disabled-tvOS@3x.png",
       "scale" : "3x"
     }
   ],
