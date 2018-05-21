@@ -18,7 +18,7 @@ struct Meaning:Decodable{
 //MyTODO: ver um jeito de fazer o código ficar rodando até achar uma palavra com example (caso em que cai no catch)
 
 class WordsAndHintsService {
-    let wordsArray = ["excuse", "acquire", "champagne", "BANANA", "NATURE", "DISTRESS", "CULINARY","SUBTLETY", "OWL"]
+    let wordsArray = ["excuse", "acquire", "champagne", "BANANA", "NATURE", "DISTRESS", "CULINARY","SUBTLETY", "OWL","cemeteries", "acquire", "champagne", "proselytizing", "protagonists", "quickly", "recommending", "refusal", "renown", "resurrecting", "separately", "siege", "sophisticated", "supplanted", "surprisingly", "throughout", "transcendental", "unconsciousness", "unusable", "unwieldy", "casualty", "accomplishments", "acquainted", "adolescent", "aficionados", "aggression", "airborne", "anonymity", "behavior", "canister"]
     var diceRoll:Int {
         get{
             return Int(arc4random_uniform(UInt32(wordsArray.count)))

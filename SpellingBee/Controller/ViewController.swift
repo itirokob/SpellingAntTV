@@ -67,14 +67,6 @@ class ViewController: UIViewController {
         return Int(arc4random_uniform(UInt32(max)))
     }
     
-    @objc func addPulse(){
-        let pulse = Pulsing(numberOfPulses: 1, radius: 150, position: speakButton.center)
-        pulse.animationDuration = 0.8
-        pulse.backgroundColor = UIColor.orange.cgColor
-        
-        self.view.layer.insertSublayer(pulse, below: speakButton.layer)
-    }
-    
     
     func initializeDict() {
         wordsAndHints.append(WordAndHintDict(word: "BANANA", hint: "I like to eat banana in the morning."))
@@ -106,10 +98,12 @@ class ViewController: UIViewController {
     }
     
     func firstSpeech() {
-        speakService.text2Speech(textToBeRead: currentWord.word)
+        speakService.text2SpeechInENandGB(textToBeRead: currentWord.word)
         
-        if(speakButton.currentImage == #imageLiteral(resourceName: "repeat")) {
-            setButtonImage(button: speakButton, imageName: "repeat")
+        DispatchQueue.main.async {
+            if(self.speakButton.currentImage == #imageLiteral(resourceName: "repeat")) {
+                self.setButtonImage(button: self.speakButton, imageName: "repeat")
+            }
         }
     }
 }
@@ -134,6 +128,7 @@ extension ViewController: MultipeerDelegate {
         } else if text == "END_OF_SPEECH" {
             //Para o pulse
             timer.invalidate()
+            
             //Trata a palavra pra ver se está certo
             let inputWord = self.lettersArrayToString(lettersArray: self.lettersArray)
             
@@ -151,12 +146,14 @@ extension ViewController: MultipeerDelegate {
             self.updateSpelledLetters(lettersArray: self.lettersArray)
             
         } else if text == "START_OF_SPEECH" {
-            
-            
+        
             //desabilita os botões
             self.disableButtons()
             //Comeca o pulse
-            timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(ViewController.addPulse), userInfo: nil, repeats: true)
+            DispatchQueue.main.async {
+                self.timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(ViewController.addPulse), userInfo: nil, repeats: true)
+                self.timer.fire()
+            }
         } else {
             
             DispatchQueue.main.async {
@@ -168,6 +165,18 @@ extension ViewController: MultipeerDelegate {
                 self.updateSpelledLetters(lettersArray: self.lettersArray)
             }
         }
+    }
+    
+    @objc func addPulse(){
+        DispatchQueue.main.async {
+            let pulse = Pulsing(numberOfPulses: 1, radius: 1000, position: self.speakButton.center)
+            pulse.animationDuration = 2.0
+            pulse.backgroundColor = UIColor.orange.cgColor
+            
+            self.view.layer.insertSublayer(pulse, below: self.speakButton.layer)
+            //self.timer.fire()
+        }
+        
     }
     
     func disableButtons() {
