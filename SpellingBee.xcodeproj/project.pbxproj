@@ -25,6 +25,7 @@
 		1284D44520AF02BC00EC09B5 /* WordAndHintDict.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordAndHintDict.swift; sourceTree = "<group>"; };
 		1284D44720B341C900EC09B5 /* Pulsing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pulsing.swift; sourceTree = "<group>"; };
 		1284D44B20B35BAC00EC09B5 /* RightOrWrongViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RightOrWrongViewController.swift; sourceTree = "<group>"; };
+		12A82A4320B4765F001EA478 /* SpellingBee.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SpellingBee.entitlements; sourceTree = "<group>"; };
 		12FECABCD02BCBA816E46DC0 /* Pods-SpellingBee.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpellingBee.release.xcconfig"; path = "Pods/Target Support Files/Pods-SpellingBee/Pods-SpellingBee.release.xcconfig"; sourceTree = "<group>"; };
 		2EEF063189433F9E22E8ED13 /* Pods_SpellingBee.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SpellingBee.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3CBACE5263C5C15D3A082741 /* Pods-SpellingBee.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpellingBee.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SpellingBee/Pods-SpellingBee.debug.xcconfig"; sourceTree = "<group>"; };
@@ -73,6 +74,7 @@
 		CB3A158720A383A0007E47F7 /* SpellingBee */ = {
 			isa = PBXGroup;
 			children = (
+				12A82A4320B4765F001EA478 /* SpellingBee.entitlements */,
 				CBB28AF420AE014200E1EA07 /* Assets.xcassets */,
 				CB3A158820A383A0007E47F7 /* AppDelegate.swift */,
 				CB3A159120A383A3007E47F7 /* Info.plist */,
@@ -176,10 +178,15 @@
 			attributes = {
 				LastSwiftUpdateCheck = 0930;
 				LastUpgradeCheck = 0930;
-				ORGANIZATIONNAME = "Bianca Itiroko";
+				ORGANIZATIONNAME = "Seong Eun Kim";
 				TargetAttributes = {
 					CB3A158420A383A0007E47F7 = {
 						CreatedOnToolsVersion = 9.3;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 0;
+							};
+						};
 					};
 				};
 			};
@@ -402,7 +409,7 @@
 			baseConfigurationReference = 3CBACE5263C5C15D3A082741 /* Pods-SpellingBee.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Launch Image";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6MTLA429XS;
 				INFOPLIST_FILE = SpellingBee/Info.plist;
@@ -410,7 +417,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.BiancaItiroko.SpellingBee;
+				PRODUCT_BUNDLE_IDENTIFIER = com.SeongEunKim.SpellingBee;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 3;
@@ -423,7 +430,7 @@
 			baseConfigurationReference = 12FECABCD02BCBA816E46DC0 /* Pods-SpellingBee.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Launch Image";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6MTLA429XS;
 				INFOPLIST_FILE = SpellingBee/Info.plist;
@@ -431,7 +438,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.BiancaItiroko.SpellingBee;
+				PRODUCT_BUNDLE_IDENTIFIER = com.SeongEunKim.SpellingBee;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 3;
