@@ -30,7 +30,7 @@ class MultipeerService:NSObject {
         session.delegate = self
         return session
     }()
-    
+    //blablabla
     override init() {
         self.serviceAdvertiser = MCNearbyServiceAdvertiser(peer: myPeerID, discoveryInfo: nil, serviceType: mpType)
         self.serviceBrowser = MCNearbyServiceBrowser(peer: myPeerID, serviceType: mpType)
