@@ -22,6 +22,8 @@ class MultipeerService:NSObject {
     
     private let serviceAdvertiser: MCNearbyServiceAdvertiser
     private let serviceBrowser: MCNearbyServiceBrowser
+    
+    var connectedPeer:MCPeerID?
 
     var delegate: MultipeerDelegate?
 
@@ -44,6 +46,7 @@ class MultipeerService:NSObject {
         self.serviceBrowser.startBrowsingForPeers()
     }
     
+    
     func send(colorName : String) {
         NSLog("%@", "sendText: text test to \(session.connectedPeers.count) peers")
         
@@ -55,6 +58,10 @@ class MultipeerService:NSObject {
                 NSLog("%@", "Error for sending: \(error)")
             }
         }
+    }
+    
+    func getConnectedPeerID() -> MCPeerID?{
+        return connectedPeer
     }
     
     deinit {
@@ -92,6 +99,7 @@ extension MultipeerService : MCNearbyServiceBrowserDelegate {
     func browser(_ browser: MCNearbyServiceBrowser, foundPeer peerID: MCPeerID, withDiscoveryInfo info: [String : String]?) {
         NSLog("%@", "foundPeer: \(peerID)")
         NSLog("%@", "invitePeer: \(peerID)")
+        self.connectedPeer = peerID
         browser.invitePeer(peerID, to: self.session, withContext: nil, timeout: 10)
     }
     

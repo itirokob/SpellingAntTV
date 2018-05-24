@@ -15,6 +15,7 @@ class ViewController: UIViewController {
     let wordService = WordsAndHintsService()
     
     @IBOutlet weak var speakButton: UIButton!
+    @IBOutlet weak var connectedDevice: UILabel!
     
     var wordsAndHints: [WordAndHintDict] = []
     
@@ -134,6 +135,12 @@ extension ViewController: MultipeerDelegate {
     ///
     /// - Parameter text: received message
     func receivedText(text:String){
+        DispatchQueue.main.async {
+            if let connectedDevice = self.multipeerService.connectedPeer?.displayName{
+                self.connectedDevice.text = "Connected device: " + connectedDevice
+            }
+        }
+        
         print("Text sent: \(text)")
     
         if text == "HINT_BUTTON"{
