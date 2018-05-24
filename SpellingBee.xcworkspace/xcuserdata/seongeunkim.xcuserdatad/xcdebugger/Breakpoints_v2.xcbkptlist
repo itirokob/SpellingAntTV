@@ -10,7 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SpellingBee/Controller/ViewController.swift"
+<<<<<<< HEAD
             timestampString = "548628854.847044"
+=======
+            timestampString = "548693447.40546"
+>>>>>>> b1ffd6e9433fa594733e53d42de188778bb35e4e
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "118"

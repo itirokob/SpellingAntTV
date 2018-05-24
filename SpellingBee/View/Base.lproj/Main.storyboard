@@ -142,37 +142,26 @@
                                     <action selector="dictateWordButton:" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="TdA-VK-dOI"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9mM-3F-rX0">
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9mM-3F-rX0">
                                 <rect key="frame" x="1708" y="38" width="190" height="164"/>
                                 <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
                                 <state key="normal" title="Button" image="hint"/>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Press the mic button on the SpellingB iOS app and spell the word!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5D6-18-R1M">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Press the mic button on the SpellingB iOS app and spell the word!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5D6-18-R1M">
                                 <rect key="frame" x="402" y="115" width="1117" height="46"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="iOS connected:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4bb-Av-CIo">
-                                <rect key="frame" x="0.0" y="38" width="1920" height="46"/>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
-                                <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="9mM-3F-rX0" firstAttribute="leading" secondItem="yQv-mW-S1k" secondAttribute="trailing" constant="-212" id="3kS-h2-gge"/>
-                            <constraint firstItem="yQv-mW-S1k" firstAttribute="top" secondItem="4bb-Av-CIo" secondAttribute="bottom" constant="-84" id="6SF-bd-PUP"/>
-                            <constraint firstItem="5D6-18-R1M" firstAttribute="centerX" secondItem="yQv-mW-S1k" secondAttribute="centerX" id="6ze-aJ-SK4"/>
-                            <constraint firstItem="yQv-mW-S1k" firstAttribute="top" secondItem="9mM-3F-rX0" secondAttribute="bottom" constant="-202" id="NIY-p4-vgH"/>
-                            <constraint firstItem="4bb-Av-CIo" firstAttribute="leading" secondItem="yQv-mW-S1k" secondAttribute="trailing" constant="-1920" id="TgT-MM-ChJ"/>
                             <constraint firstItem="yQv-mW-S1k" firstAttribute="top" secondItem="gD2-YV-A3J" secondAttribute="bottom" constant="-706" id="XXB-zj-rZ6"/>
                             <constraint firstAttribute="trailing" secondItem="yQv-mW-S1k" secondAttribute="trailing" id="dbC-Ig-Jax"/>
                             <constraint firstItem="gD2-YV-A3J" firstAttribute="centerX" secondItem="yQv-mW-S1k" secondAttribute="centerX" id="dgK-oI-JwT"/>
                             <constraint firstItem="gD2-YV-A3J" firstAttribute="width" secondItem="yQv-mW-S1k" secondAttribute="width" multiplier="0.3" constant="-112" id="dsQ-8s-vpA"/>
                             <constraint firstItem="yQv-mW-S1k" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="g6C-m9-asY"/>
-                            <constraint firstItem="4bb-Av-CIo" firstAttribute="width" secondItem="yQv-mW-S1k" secondAttribute="width" id="lsb-4G-d1N"/>
                             <constraint firstItem="yQv-mW-S1k" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="qpv-Fh-mhK"/>
                             <constraint firstItem="yQv-mW-S1k" firstAttribute="top" secondItem="5D6-18-R1M" secondAttribute="bottom" constant="-161" id="u6T-i4-jkv"/>
                             <constraint firstAttribute="bottom" secondItem="yQv-mW-S1k" secondAttribute="bottom" id="vXp-PY-uEk"/>
@@ -180,7 +169,6 @@
                         <viewLayoutGuide key="safeArea" id="wu6-TO-1qx"/>
                     </view>
                     <connections>
-                        <outlet property="connectedDevice" destination="4bb-Av-CIo" id="ohu-sF-Omo"/>
                         <outlet property="speakButton" destination="gD2-YV-A3J" id="EJy-WZ-IwV"/>
                         <outletCollection property="letterImages" destination="5Oq-Wh-85i" collectionClass="NSMutableArray" id="hxt-Ap-i7J"/>
                         <outletCollection property="letterImages" destination="yOZ-3m-xFX" collectionClass="NSMutableArray" id="je5-gK-GyI"/>
