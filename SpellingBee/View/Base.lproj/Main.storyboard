@@ -257,13 +257,13 @@
             </objects>
             <point key="canvasLocation" x="1998" y="-1077"/>
         </scene>
-        <!--Page View Controller-->
+        <!--Tutorial Page View Controller-->
         <scene sceneID="XmZ-Sd-XuO">
             <objects>
-                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="pageCurl" navigationOrientation="horizontal" spineLocation="min" id="AhR-wi-nZj" sceneMemberID="viewController"/>
+                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="AhR-wi-nZj" customClass="TutorialPageViewController" customModule="SpellingBee" customModuleProvider="target" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aPE-gt-k1Q" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1998" y="910"/>
+            <point key="canvasLocation" x="1516" y="910"/>
         </scene>
         <!--Right Or Wrong View Controller-->
         <scene sceneID="zVE-uI-a42">
@@ -346,6 +346,39 @@
                 <exit id="0D3-cC-0n8" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="4270" y="-1102"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="TAh-mM-cY6">
+            <objects>
+                <viewController storyboardIdentifier="TutorialPage2" id="BBk-DP-lmH" sceneMemberID="viewController">
+                    <imageView key="view" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="OUf-vH-HQI">
+                        <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" red="1" green="0.75367459110000001" blue="0.1545890419" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </imageView>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DpF-eZ-j3P" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5646" y="910"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="sNz-Ij-cj9">
+            <objects>
+                <viewController storyboardIdentifier="TutorialPage1" id="l5I-2o-WAk" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="XpT-iZ-EY9"/>
+                        <viewControllerLayoutGuide type="bottom" id="fG3-bz-bDx"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="z2p-fX-fsg">
+                        <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.57414853570000002" green="0.57416242360000003" blue="0.57415497299999996" alpha="1" colorSpace="deviceRGB"/>
+                        <viewLayoutGuide key="safeArea" id="37W-Xm-UzY"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="j05-zn-vRn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3574" y="910"/>
         </scene>
     </scenes>
     <resources>
