@@ -358,31 +358,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DpF-eZ-j3P" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5646" y="910"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="bbM-iB-wLc">
-            <objects>
-                <viewController id="Y7M-ci-twB" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="pRQ-11-h5s"/>
-                        <viewControllerLayoutGuide type="bottom" id="jhY-Kb-5Hq"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="KW1-2J-Rjl">
-                        <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gvF-tR-RI7">
-                                <rect key="frame" x="1242" y="697" width="240" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="txf-Uj-0va"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dGg-9O-6N5" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="5235" y="2869"/>
+            <point key="canvasLocation" x="6018" y="910"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="sNz-Ij-cj9">
@@ -395,7 +371,20 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="j05-zn-vRn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3574" y="910"/>
+            <point key="canvasLocation" x="3731" y="910"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="QDD-gm-1u5">
+            <objects>
+                <viewController storyboardIdentifier="TutorialPage3" id="FiS-lQ-4tJ" sceneMemberID="viewController">
+                    <imageView key="view" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Tutorial-3" id="Vzn-IV-GUQ">
+                        <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    </imageView>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="udr-Xq-MVg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="8188" y="910"/>
         </scene>
     </scenes>
     <resources>
@@ -404,6 +393,7 @@
         <image name="StartBtn" width="350" height="301"/>
         <image name="Tutorial-1" width="1920" height="1080"/>
         <image name="Tutorial-2" width="1920" height="1080"/>
+        <image name="Tutorial-3" width="1920" height="1080"/>
         <image name="hint" width="110" height="124"/>
         <image name="play" width="398" height="504"/>
     </resources>
