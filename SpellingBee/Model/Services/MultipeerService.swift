@@ -106,8 +106,6 @@ extension MultipeerService : MCNearbyServiceBrowserDelegate {
     func browser(_ browser: MCNearbyServiceBrowser, lostPeer peerID: MCPeerID) {
         NSLog("%@", "lostPeer: \(peerID)")
     }
-    
-    
 }
 
 extension MultipeerService : MCSessionDelegate {
