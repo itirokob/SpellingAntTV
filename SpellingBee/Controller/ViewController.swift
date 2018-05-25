@@ -35,11 +35,14 @@ class ViewController: UIViewController {
     
     var isTryAgain = true
     
+    var pulse = Pulsing(radius: 0, position: CGPoint(x: 0, y: 0))
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.initializeDict()
-        
+
+
         wordsToBeChosen = wordsAndHints
         
         multipeerService.delegate = self
@@ -154,19 +157,19 @@ extension ViewController: MultipeerDelegate {
             //Play repeat
         } else if text == "END_OF_SPEECH" {
             //Para o pulse
-            timer.invalidate()
+            DispatchQueue.main.async {
+                self.pulse.removeFromSuperlayer()
+                self.timer.invalidate()
+            }
             
             //Trata a palavra pra ver se está certo
             let inputWord = self.lettersArrayToString(lettersArray: self.lettersArray)
             
             if inputWord == currentWord.word {
-//                popAlert(title: "YAY", message: "Right answer!")
-                
                 self.isCorrect = true
                 
                 print("Right answer")
             } else {
-//                popAlert(title: "Oh no!", message: "Wrong answer!")
                 self.isCorrect = false
                 print("Wrong answer")
             }
@@ -211,12 +214,11 @@ extension ViewController: MultipeerDelegate {
     
     @objc func addPulse(){
         DispatchQueue.main.async {
-            let pulse = Pulsing(numberOfPulses: 1, radius: 300, position: self.speakButton.center)
-            pulse.animationDuration = 1.4
-            pulse.backgroundColor = UIColor.orange.cgColor
+            self.pulse = Pulsing(numberOfPulses: 1, radius: 300, position: self.speakButton.center)
+            self.pulse.animationDuration = 1.4
+            self.pulse.backgroundColor = UIColor.orange.cgColor
             
-            self.view.layer.insertSublayer(pulse, below: self.speakButton.layer)
-            //self.timer.fire()
+            self.view.layer.insertSublayer(self.pulse, below: self.speakButton.layer)
         }
         
     }
