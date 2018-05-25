@@ -260,7 +260,7 @@
         <!--Tutorial Page View Controller-->
         <scene sceneID="XmZ-Sd-XuO">
             <objects>
-                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="AhR-wi-nZj" customClass="TutorialPageViewController" customModule="SpellingBee" customModuleProvider="target" sceneMemberID="viewController"/>
+                <pageViewController storyboardIdentifier="tutorialViewController" autoresizesArchivedViewToFullSize="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="AhR-wi-nZj" customClass="TutorialPageViewController" customModule="SpellingBee" customModuleProvider="target" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aPE-gt-k1Q" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1516" y="910"/>
@@ -345,16 +345,15 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LlI-Gv-DKy" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="0D3-cC-0n8" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="4270" y="-1102"/>
+            <point key="canvasLocation" x="4908" y="-1077"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="TAh-mM-cY6">
             <objects>
                 <viewController storyboardIdentifier="TutorialPage2" id="BBk-DP-lmH" sceneMemberID="viewController">
-                    <imageView key="view" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="OUf-vH-HQI">
+                    <imageView key="view" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Tutorial-2" id="vKn-rC-b57">
                         <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" red="1" green="0.75367459110000001" blue="0.1545890419" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </imageView>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DpF-eZ-j3P" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -362,19 +361,37 @@
             <point key="canvasLocation" x="5646" y="910"/>
         </scene>
         <!--View Controller-->
+        <scene sceneID="bbM-iB-wLc">
+            <objects>
+                <viewController id="Y7M-ci-twB" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="pRQ-11-h5s"/>
+                        <viewControllerLayoutGuide type="bottom" id="jhY-Kb-5Hq"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="KW1-2J-Rjl">
+                        <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gvF-tR-RI7">
+                                <rect key="frame" x="1242" y="697" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="txf-Uj-0va"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dGg-9O-6N5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5235" y="2869"/>
+        </scene>
+        <!--View Controller-->
         <scene sceneID="sNz-Ij-cj9">
             <objects>
                 <viewController storyboardIdentifier="TutorialPage1" id="l5I-2o-WAk" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="XpT-iZ-EY9"/>
-                        <viewControllerLayoutGuide type="bottom" id="fG3-bz-bDx"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="z2p-fX-fsg">
+                    <imageView key="view" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Tutorial-1" id="hRV-tg-bc2">
                         <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.57414853570000002" green="0.57416242360000003" blue="0.57415497299999996" alpha="1" colorSpace="deviceRGB"/>
-                        <viewLayoutGuide key="safeArea" id="37W-Xm-UzY"/>
-                    </view>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    </imageView>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="j05-zn-vRn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -385,6 +402,8 @@
         <image name="Background-orange" width="1920" height="1080"/>
         <image name="Main Menu - BG" width="1920" height="1080"/>
         <image name="StartBtn" width="350" height="301"/>
+        <image name="Tutorial-1" width="1920" height="1080"/>
+        <image name="Tutorial-2" width="1920" height="1080"/>
         <image name="hint" width="110" height="124"/>
         <image name="play" width="398" height="504"/>
     </resources>

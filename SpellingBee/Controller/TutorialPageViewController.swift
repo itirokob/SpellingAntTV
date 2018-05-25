@@ -35,12 +35,12 @@ class TutorialPageViewController: UIPageViewController, UIPageViewControllerData
             setViewControllers([firstVC], direction: .forward, animated: false, completion: nil)
         }
         
-        setupPageControl()
+        self.setupPageControl()
     }
 
     private func setupPageControl() {
         
-        pageControl = UIPageControl(frame: CGRect(x: 0,y: UIScreen.main.bounds.maxY - 50,width: UIScreen.main.bounds.width,height: 50))
+        pageControl = UIPageControl(frame: CGRect(x: 0,y: UIScreen.main.bounds.maxY - 50, width: UIScreen.main.bounds.width,height: 50))
         pageControl.tintColor = UIColor.black.withAlphaComponent(0)
         pageControl.numberOfPages = pages.count
         pageControl.translatesAutoresizingMaskIntoConstraints = false
@@ -58,13 +58,19 @@ class TutorialPageViewController: UIPageViewController, UIPageViewControllerData
     }
     
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
-        guard let viewControllerIndex = pages.index(of: viewController) else { return nil }
+        guard let viewControllerIndex = pages.index(of: viewController) else {
+            return nil
+        }
         
         let previousIndex = viewControllerIndex - 1
         
-        guard previousIndex >= 0          else { return pages.last }
+        guard previousIndex >= 0 else {
+            return pages.last
+        }
         
-        guard pages.count > previousIndex else { return nil        }
+        guard pages.count > previousIndex else {
+            return nil
+        }
         
         return pages[previousIndex]
     }
@@ -88,16 +94,6 @@ class TutorialPageViewController: UIPageViewController, UIPageViewControllerData
     func presentationIndexForPageViewController(pageViewController: UIPageViewController) -> Int {
         return 0
     }
-    
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
