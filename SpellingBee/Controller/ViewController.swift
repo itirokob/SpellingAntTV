@@ -62,9 +62,13 @@ class ViewController: UIViewController {
     @IBAction func dictateWordButton(_ sender: Any) {
         self.firstSpeech()
     }
+    @IBAction func hintButtonAction(_ sender: Any) {
+        speakService.textToSpeechLongSentence(textToBeRead: currentWord.hint)
+    }
     
     override func viewWillAppear(_ animated: Bool) {
         DispatchQueue.main.async {
+
             for imageView in self.letterImages{
                 imageView.image = nil
             }
@@ -158,7 +162,7 @@ extension ViewController: MultipeerDelegate {
         } else if text == "END_OF_SPEECH" {
             //Para o pulse
             DispatchQueue.main.async {
-                self.pulse.removeFromSuperlayer()
+//                self.pulse.removeAllAnimations()
                 self.timer.invalidate()
             }
             
@@ -187,9 +191,12 @@ extension ViewController: MultipeerDelegate {
             //desabilita os botões
             self.disableButtons()
             //Comeca o pulse
-            DispatchQueue.main.async {
-                self.timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(ViewController.addPulse), userInfo: nil, repeats: true)
-                self.timer.fire()
+            
+            if(!self.timer.isValid){
+                DispatchQueue.main.async {
+                    self.timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(ViewController.addPulse), userInfo: nil, repeats: true)
+                    self.timer.fire()
+                }
             }
         } else {
             
@@ -213,13 +220,13 @@ extension ViewController: MultipeerDelegate {
     }
     
     @objc func addPulse(){
-        DispatchQueue.main.async {
+//        DispatchQueue.main.async {
             self.pulse = Pulsing(numberOfPulses: 1, radius: 300, position: self.speakButton.center)
             self.pulse.animationDuration = 1.4
             self.pulse.backgroundColor = UIColor.orange.cgColor
             
             self.view.layer.insertSublayer(self.pulse, below: self.speakButton.layer)
-        }
+//        }
         
     }
     
