@@ -20,6 +20,7 @@
 		CB9CDCEA20B3352A003DE3C0 /* WordsAndHintsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB9CDCE920B3352A003DE3C0 /* WordsAndHintsService.swift */; };
 		CBB28AF520AE014200E1EA07 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CBB28AF420AE014200E1EA07 /* Assets.xcassets */; };
 		CBC54D9920AEF79A00A479FC /* SpeakService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC54D9820AEF79A00A479FC /* SpeakService.swift */; };
+		CBD5EB7720B8E434002832E2 /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD5EB7620B8E434002832E2 /* PageViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		CB9CDCE920B3352A003DE3C0 /* WordsAndHintsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordsAndHintsService.swift; sourceTree = "<group>"; };
 		CBB28AF420AE014200E1EA07 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CBC54D9820AEF79A00A479FC /* SpeakService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeakService.swift; sourceTree = "<group>"; };
+		CBD5EB7620B8E434002832E2 /* PageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +112,7 @@
 				CB3A158A20A383A0007E47F7 /* ViewController.swift */,
 				1284D44B20B35BAC00EC09B5 /* RightOrWrongViewController.swift */,
 				12A82A4520B84CF2001EA478 /* TutorialPageViewController.swift */,
+				CBD5EB7620B8E434002832E2 /* PageViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -269,6 +272,7 @@
 			files = (
 				1284D44820B341C900EC09B5 /* Pulsing.swift in Sources */,
 				CB3A158B20A383A0007E47F7 /* ViewController.swift in Sources */,
+				CBD5EB7720B8E434002832E2 /* PageViewController.swift in Sources */,
 				CB4ABD1820A4BF3600B07EA3 /* MultipeerService.swift in Sources */,
 				CB9CDCEA20B3352A003DE3C0 /* WordsAndHintsService.swift in Sources */,
 				1284D44C20B35BAC00EC09B5 /* RightOrWrongViewController.swift in Sources */,

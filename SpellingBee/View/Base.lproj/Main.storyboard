@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder.AppleTV.Storyboard" version="3.0" toolsVersion="14109" targetRuntime="AppleTV" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ffc-Gk-lV4">
+<document type="com.apple.InterfaceBuilder.AppleTV.Storyboard" version="3.0" toolsVersion="14109" targetRuntime="AppleTV" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="AhR-wi-nZj">
     <device id="appleTV" orientation="landscape">
         <adaptation id="light"/>
     </device>
@@ -45,7 +45,7 @@
                                 <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
                                 <state key="normal" image="play"/>
                                 <connections>
-                                    <segue destination="AhR-wi-nZj" kind="show" id="RJm-q1-mao"/>
+                                    <segue destination="AhR-wi-nZj" kind="show" id="OXg-xg-f4u"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="820-b0-dVn">
@@ -260,10 +260,12 @@
         <!--Tutorial Page View Controller-->
         <scene sceneID="XmZ-Sd-XuO">
             <objects>
-                <pageViewController storyboardIdentifier="tutorialViewController" autoresizesArchivedViewToFullSize="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="AhR-wi-nZj" customClass="TutorialPageViewController" customModule="SpellingBee" customModuleProvider="target" sceneMemberID="viewController"/>
+                <pageViewController storyboardIdentifier="tutorialViewController" autoresizesArchivedViewToFullSize="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="AhR-wi-nZj" customClass="TutorialPageViewController" customModule="SpellingBee" customModuleProvider="target" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="KKN-qJ-7Tv"/>
+                </pageViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aPE-gt-k1Q" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1516" y="910"/>
+            <point key="canvasLocation" x="3648" y="910"/>
         </scene>
         <!--Right Or Wrong View Controller-->
         <scene sceneID="zVE-uI-a42">
@@ -358,7 +360,42 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DpF-eZ-j3P" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6018" y="910"/>
+            <point key="canvasLocation" x="8150" y="910"/>
+        </scene>
+        <!--Page View Controller-->
+        <scene sceneID="SZk-GZ-04R">
+            <objects>
+                <viewController storyboardIdentifier="TutorialPage22" id="Djb-gp-48O" customClass="PageViewController" customModule="SpellingBee" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="f07-IX-mxt"/>
+                        <viewControllerLayoutGuide type="bottom" id="dQ4-jt-ajz"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="bLZ-ZV-JXo">
+                        <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Tutorial-2" translatesAutoresizingMaskIntoConstraints="NO" id="Sgu-lH-rbc">
+                                <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3ct-BI-ihF">
+                                <rect key="frame" x="1615" y="68" width="195" height="86"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="skipAction:" destination="Djb-gp-48O" eventType="primaryActionTriggered" id="2Ij-YO-Cu0"/>
+                                    <segue destination="7vu-h8-fjb" kind="unwind" unwindAction="unwindToGameVCWithSegue:" id="9Ay-LW-hNH"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="UFu-3q-yZV"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Tvc-OO-BTB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="7vu-h8-fjb" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="5956" y="2282"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="sNz-Ij-cj9">
@@ -371,7 +408,42 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="j05-zn-vRn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3731" y="910"/>
+            <point key="canvasLocation" x="5863" y="910"/>
+        </scene>
+        <!--Page View Controller-->
+        <scene sceneID="vxT-bh-Qpx">
+            <objects>
+                <viewController storyboardIdentifier="TutorialPage12" id="HmW-7h-pLd" customClass="PageViewController" customModule="SpellingBee" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="1wC-1K-cOb"/>
+                        <viewControllerLayoutGuide type="bottom" id="izS-tj-qGX"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="y5s-By-dz2">
+                        <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Tutorial-1" translatesAutoresizingMaskIntoConstraints="NO" id="jwp-QZ-PuI">
+                                <rect key="frame" x="0.0" y="-8" width="1920" height="1097"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9zm-Ij-7eS">
+                                <rect key="frame" x="1615" y="383" width="195" height="86"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="skipAction:" destination="HmW-7h-pLd" eventType="primaryActionTriggered" id="HA1-8U-EZg"/>
+                                    <segue destination="LvD-jh-edG" kind="unwind" unwindAction="unwindToGameVCWithSegue:" id="bEt-Zu-A8z"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="EoP-DX-pUX"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dEa-iL-YZe" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="LvD-jh-edG" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="3731" y="2312"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="QDD-gm-1u5">
@@ -384,7 +456,42 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="udr-Xq-MVg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="8188" y="910"/>
+            <point key="canvasLocation" x="10320" y="910"/>
+        </scene>
+        <!--Page View Controller-->
+        <scene sceneID="h1a-BT-761">
+            <objects>
+                <viewController storyboardIdentifier="TutorialPage32" id="kat-l1-zf8" customClass="PageViewController" customModule="SpellingBee" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="eEb-Mn-Vot"/>
+                        <viewControllerLayoutGuide type="bottom" id="2hc-p2-biy"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="nJk-wy-pPD">
+                        <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Tutorial-3" translatesAutoresizingMaskIntoConstraints="NO" id="ta5-CU-sFL">
+                                <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q7P-Nd-2N6">
+                                <rect key="frame" x="1615" y="60" width="195" height="86"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="skipAction:" destination="kat-l1-zf8" eventType="primaryActionTriggered" id="l85-bS-61y"/>
+                                    <segue destination="rdO-ql-GeY" kind="unwind" unwindAction="unwindToGameVCWithSegue:" id="rij-ZN-NlT"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="VAZ-PO-MzE"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zhd-uZ-qH3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="rdO-ql-GeY" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="8150" y="2236"/>
         </scene>
     </scenes>
     <resources>

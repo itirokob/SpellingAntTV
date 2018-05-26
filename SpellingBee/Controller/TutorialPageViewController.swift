@@ -12,12 +12,14 @@ class TutorialPageViewController: UIPageViewController, UIPageViewControllerData
     
     private var pageControl = UIPageControl()
     
-
+    
+    
+    
     fileprivate lazy var pages: [UIViewController] = {
         return [
-            self.getViewController(withIdentifier: "TutorialPage1"),
-            self.getViewController(withIdentifier: "TutorialPage2"),
-            self.getViewController(withIdentifier: "TutorialPage3")
+            self.getViewController(withIdentifier: "TutorialPage12"),
+            self.getViewController(withIdentifier: "TutorialPage22"),
+            self.getViewController(withIdentifier: "TutorialPage32")
         ]
     }()
     
