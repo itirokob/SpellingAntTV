@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder.AppleTV.Storyboard" version="3.0" toolsVersion="14109" targetRuntime="AppleTV" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="AhR-wi-nZj">
+<document type="com.apple.InterfaceBuilder.AppleTV.Storyboard" version="3.0" toolsVersion="14109" targetRuntime="AppleTV" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ffc-Gk-lV4">
     <device id="appleTV" orientation="landscape">
         <adaptation id="light"/>
     </device>
@@ -43,7 +43,7 @@
                                 <rect key="frame" x="163" y="329" width="422" height="422"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
-                                <state key="normal" image="play"/>
+                                <state key="normal" image="tutorial-btn"/>
                                 <connections>
                                     <segue destination="AhR-wi-nZj" kind="show" id="OXg-xg-f4u"/>
                                 </connections>
@@ -52,7 +52,7 @@
                                 <rect key="frame" x="1369" y="329" width="422" height="422"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
-                                <state key="normal" image="play"/>
+                                <state key="normal" image="about-btn"/>
                                 <connections>
                                     <segue destination="flE-Kp-YPI" kind="show" id="sty-eg-gOf"/>
                                 </connections>
@@ -427,7 +427,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9zm-Ij-7eS">
-                                <rect key="frame" x="1615" y="383" width="195" height="86"/>
+                                <rect key="frame" x="1615" y="68" width="195" height="86"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
                                 <state key="normal" title="Button"/>
@@ -501,7 +501,9 @@
         <image name="Tutorial-1" width="1920" height="1080"/>
         <image name="Tutorial-2" width="1920" height="1080"/>
         <image name="Tutorial-3" width="1920" height="1080"/>
+        <image name="about-btn" width="213" height="184"/>
         <image name="hint" width="110" height="124"/>
         <image name="play" width="398" height="504"/>
+        <image name="tutorial-btn" width="213" height="184"/>
     </resources>
 </document>
