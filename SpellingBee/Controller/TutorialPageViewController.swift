@@ -90,6 +90,11 @@ class TutorialPageViewController: UIPageViewController, UIPageViewControllerData
         return pages[nextIndex]
     }
     
+    func pageViewController(_ pageViewController: UIPageViewController, didFinishAnimating finished: Bool, previousViewControllers: [UIViewController], transitionCompleted completed: Bool) {
+        let pageContentViewController = pageViewController.viewControllers![0]
+        self.pageControl.currentPage = pages.index(of: pageContentViewController)!
+    }
+    
     func presentationCountForPageViewController(pageViewController: UIPageViewController) -> Int {
         return pages.count
     }
